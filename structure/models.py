@@ -1,3 +1,5 @@
+# pylint: disable=C0114,R0903,E0307,C0116,C0115
+
 from django.db import models
 
 
@@ -80,6 +82,6 @@ class Apartment(models.Model):
         verbose_name_plural = 'Квартиры'
         ordering = ('address', 'apartment_number')
 
-    def get_apartments(slef, address, entrance_number=None, floor_number=None):
+    def get_apartments(self, address, entrance_number=None, floor_number=None):
         return Apartment.objects.filter(**{field: arg for field, arg in {
             'address':address, 'entrance_number':entrance_number, 'floor_number':floor_number} if arg})
