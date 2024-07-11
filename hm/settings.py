@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'structure.apps.StructureConfig',
     'participant.apps.ParticipantConfig',
     'service.apps.ServiceConfig',
+    'voting.apps.VotingConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Project settings
+
+VOTE_DURATION_DAYS = 30
+FLOOR_CHIEF_DURATION_YEARS = 1
+ENTRANCE_CHIEF_DURATION_YEARS = 2
+BUILDING_CHIEF_DURATION_YEARS = 3

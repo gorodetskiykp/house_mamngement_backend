@@ -10,9 +10,9 @@ class Participant(models.Model):
     auth_user = models.ForeignKey(User, verbose_name="Пользователь", on_delete=models.PROTECT, related_name="participants")
     apartment = models.ForeignKey(Apartment, verbose_name="Адрес", on_delete=models.PROTECT, related_name="participants")
     share = models.PositiveBigIntegerField("Доля %")
-    is_floor_chief = models.BooleanField("Главный по этажу", default=False)
-    is_entrance_chief = models.BooleanField("Главный по подъезду", default=False)
-    is_building_chief = models.BooleanField("Главный по дому", default=False)
+    phone = models.CharField('Телефон', max_length=50, blank=True, null=True)
+    telegram = models.CharField('Telegram', max_length=50, blank=True, null=True)
+    other_contacts = models.CharField('Другие контакты', max_length=500, blank=True, null=True)
 
     def __str__(self):
         return f'{self.apartment}'
