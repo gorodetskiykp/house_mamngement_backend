@@ -36,7 +36,7 @@ class VoteResults(models.Model):
     choice_date = models.DateTimeField('Дата выбора', auto_now_add=True)
 
     def __str__(self):
-        return f'{self.vote_type} - {self.candidate}. {self.start_date}'
+        return f'{self.vote}. {self.choice}.  {self.choice_date}.'
     
     class Meta:
         verbose_name = 'Голос'
