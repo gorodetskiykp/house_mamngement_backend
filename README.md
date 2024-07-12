@@ -1,2 +1,2 @@
-# house_mamagement_backend
+# house_management_backend
 Система управления многоквартирным домом
